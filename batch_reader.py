@@ -1,5 +1,6 @@
 from audio_meters import AudioMeters
 import os
+import numpy as np
 
 
 class BatchReader():
@@ -10,9 +11,7 @@ class BatchReader():
         self.average_tp = None
         self.average_lufs = None
 
-
     def run(self):
-
         lufs_database = []
         tp_database = []
 
@@ -31,23 +30,5 @@ class BatchReader():
             tp_database.append(measures['True Peak']['Peak'])
             print(track + " has been added successfully")
 
-        self.average_lufs = self.get_average_lufs(lufs_database)
-        self.average_tp = self.get_average_tp(tp_database)
-
-    def get_average_lufs(self, lufs_database):
-
-        lufs_database_sum = 0.0
-
-        for i in lufs_database:
-            lufs_database_sum += i
-
-        return lufs_database_sum / len(lufs_database)
-
-    def get_average_tp(self, tp_database):
-
-        tp_database_sum = 0.0
-
-        for i in tp_database:
-            tp_database_sum += i
-
-        return tp_database_sum / len(tp_database)
+        self.average_lufs = np.mean(lufs_database)
+        self.average_tp = np.mean(tp_database)
