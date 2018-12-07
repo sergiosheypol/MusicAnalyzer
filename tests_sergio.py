@@ -10,6 +10,7 @@ from batch_reader import BatchReader
 reader = BatchReader('audio_files')
 reader.run()
 
-print(reader.database)
+print(reader.tp_database)
+print(reader.lufs_database)
 print(reader.average_tp)
 print(reader.average_lufs)
