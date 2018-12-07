@@ -1,4 +1,5 @@
 from audio_meters import AudioMeters
+from file_converter import FileConverter
 import os
 import numpy as np
 
@@ -49,5 +50,25 @@ class BatchReader():
             print(track + " has been added successfully")
 
         # Calculate the mean value of each parameter
-        self.average_lufs = np.mean(lufs_aux)
-        self.average_tp = np.mean(tp_aux)
+        self.average_lufs = {
+            'avg_lufs': np.mean(lufs_aux)
+        }
+        self.average_tp = {
+            'avg_tp': np.mean(tp_aux)
+        }
+
+    def export(self, folder_path):
+        fc = FileConverter(folder_path)
+
+        # Checking if everything's not null
+        if self.lufs_database != []:
+            fc.py_to_json(self.lufs_database, 'lufs.json')
+
+        if self.tp_database != []:
+            fc.py_to_json(self.tp_database, 'tp.json')
+
+        if self.average_lufs != None:
+            fc.py_to_json(self.average_lufs, 'avg_lufs.json')
+
+        if self.average_tp != None:
+            fc.py_to_json(self.average_tp, 'avg_tp.json')

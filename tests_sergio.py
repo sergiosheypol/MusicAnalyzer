@@ -7,10 +7,12 @@
 
 from batch_reader import BatchReader
 
-reader = BatchReader('audio_files')
+reader = BatchReader('audio_files/edm')
 reader.run()
 
 print(reader.tp_database)
 print(reader.lufs_database)
 print(reader.average_tp)
 print(reader.average_lufs)
+
+reader.export('output/edm')
