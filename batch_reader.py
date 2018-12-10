@@ -6,6 +6,11 @@ import numpy as np
 
 class BatchReader():
     def __init__(self, folder_path):
+
+        if not os.path.exists(folder_path):
+            print('BatchReader: That folder does not exist')
+            return
+
         # Where to find the mp3 files
         self.path = folder_path
 

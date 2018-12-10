@@ -39,15 +39,13 @@ from batch_reader import BatchReader
 
 
 # reader3 = BatchReader('audio_files/rock')
-# reader3.add_existing_lufs_database('output/rock', 'lufs.json')
-# reader3.add_existing_tp_database('output/rock', 'tp.json')
-# reader3.calculate_avg_tp()
-# reader3.calculate_avg_lufs()
+# reader3.run()
+# reader3.export('output/rock')
 # print(reader3.average_lufs)
 # print(reader3.average_tp)
 
-reader4 = BatchReader('audio_files/rock')
-reader4.add_existing_lufs_database('output/edm', 'lufs.json')
+# reader4 = BatchReader('audio_files/rock')
+# reader4.add_existing_lufs_database('output/edm', 'lufs.json')
 # reader4.add_existing_tp_database('output/edm', 'tp.json')
 #
 # reader4.run()
