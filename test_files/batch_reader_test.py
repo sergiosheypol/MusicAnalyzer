@@ -52,3 +52,9 @@ from batch_reader import BatchReader
 # reader4.export('output/mix')
 #
 # print(reader4.tp_database)
+
+# Reggaeton
+
+reader = BatchReader('audio_files/reggaeton')
+reader.run()
+reader.export('genres_database/reggaeton')
