@@ -2,22 +2,29 @@ from file_converter import FileConverter
 from audio_meters import AudioMeters
 import os
 import numpy as np
+import pandas as pd
+from pathlib import Path
 
 
 class DataAnalyzer():
 
     def __init__(self, database_path, database_file_name):
-        self.genres_database = []
-        self.database_file_name = database_file_name
 
         if not os.path.exists(database_path):
             return
 
+        database_path = Path(database_path)
+        self.database_file_path = database_path / database_file_name
+
         self.database_reader = FileConverter(database_path)
 
         # Load database if exists
-        if os.path.isfile(database_path + '/' + database_file_name):
-            self.genres_database = self.database_reader.json_to_py(database_file_name)
+        if os.path.isfile(self.database_file_path):
+            self.genres_database = pd.DataFrame(self.database_reader.json_to_py(database_file_name))
+            self.genres_database.set_index('name', inplace=True)
+
+
+
 
     def add_genre(self, folder_path, genre_name, tp_file_name, lufs_file_name):
         f_reader = FileConverter(folder_path)

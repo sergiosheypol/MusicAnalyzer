@@ -2,6 +2,8 @@ from audio_meters import AudioMeters
 from file_converter import FileConverter
 import os
 import numpy as np
+import pandas as pd
+from pathlib import Path
 
 
 class BatchReader():
@@ -18,8 +20,7 @@ class BatchReader():
         self.files = os.listdir(folder_path)
 
         # Storage for analyzed values
-        self.lufs_database = []
-        self.tp_database = []
+        self.analyzed_tracks_database = []
 
         # Average True Peak value of the analyzed files
         self.average_tp = None
@@ -31,42 +32,42 @@ class BatchReader():
     def run(self):
         # Analyzer
         for track in self.files:
-            measures = AudioMeters.get_loudness(self.path + '/' + track)
+            path = Path(self.path) / track
 
-            tp = {
-                track: measures['True Peak']['Peak']
-            }
+            measures = AudioMeters.get_loudness(str(path))
 
-            lufs = {
-                track: measures['Integrated Loudness']['I']
-            }
+            tp = measures['True Peak']['Peak']
+            lufs = measures['Integrated Loudness']['I']
 
-            # Store values
-            self.lufs_database.append(lufs)
-            self.tp_database.append(tp)
-
+            self.analyzed_tracks_database.append([track, lufs, tp])
             print(track + " has been added successfully")
 
-        # Calculate the mean value of each parameter
-        self.calculate_avg_lufs()
-        self.calculate_avg_tp()
+        # Create DataFrame
+        self.database = pd.DataFrame(self.analyzed_tracks_database, columns=['name', 'lufs', 'tp'])
+        self.database.set_index('name', inplace=True)
+
+        # Calculate average values
+        stats = self.database.mean()
+        self.average_lufs = stats.lufs
+        self.average_tp = stats.tp
+
+
+
 
     # Export the results into JSON
-    def export(self, folder_path):
-        fc = FileConverter(folder_path)
+    def export(self, file_path):
 
         # Checking if everything's not null
-        if self.lufs_database:
-            fc.py_to_json(self.lufs_database, 'lufs.json')
+        # TWEAK!!
+        # if self.database:
+        #
+        self.database.to_json(Path(file_path), orient='records')
 
-        if self.tp_database:
-            fc.py_to_json(self.tp_database, 'tp.json')
-
-        if self.average_lufs:
-            fc.py_to_json(self.average_lufs, 'avg_lufs.json')
-
-        if self.average_tp:
-            fc.py_to_json(self.average_tp, 'avg_tp.json')
+        # if self.average_lufs:
+        #     fc.py_to_json(self.average_lufs, 'avg_lufs.json')
+        #
+        # if self.average_tp:
+        #     fc.py_to_json(self.average_tp, 'avg_tp.json')
 
     # Add an existing LUFS database
     def add_existing_lufs_database(self, folder_path, file):
@@ -116,42 +117,3 @@ class BatchReader():
 
         return True
 
-    # Calculate the average lufs value from a given database
-    def calculate_avg_lufs(self):
-
-        if not self.lufs_database:
-            return False
-
-        values = []
-
-        # Read all tracks in database
-        for track in self.lufs_database:
-            value = list(track.values())
-            values.append(value)
-
-        # Calculate the avg LUFS value
-        self.average_lufs = {
-            'avg_lufs': np.mean(values)
-        }
-
-        return True
-
-    # Calculate the average tp value from a given database
-    def calculate_avg_tp(self):
-
-        if not self.tp_database:
-            return False
-
-        values = []
-
-        # Read all tracks in database
-        for track in self.tp_database:
-            value = list(track.values())
-            values.append(value)
-
-        # Calculate the avg TP value
-        self.average_tp = {
-            'avg_tp': np.mean(values)
-        }
-
-        return True

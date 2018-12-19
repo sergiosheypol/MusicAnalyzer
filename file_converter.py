@@ -1,17 +1,17 @@
 import os
 import json
-
+from pathlib import Path
 
 class FileConverter():
     def __init__(self, folder_path):
         # Where to find the mp3 files
-        self.path = folder_path
+        self.path = Path(folder_path)
 
     # Method: converts the python dictionary 'py_list' into a json file named 'file_name'
     def py_to_json(self, py_list, file_name):
 
         # Where to create the json file
-        output_path = self.path + '/' + file_name
+        output_path = self.path / file_name
 
         # Takes the python dictionary and produces a string
         json_string = json.dumps(py_list)
@@ -28,7 +28,7 @@ class FileConverter():
     def json_to_py(self, file_name):
 
         # Where to find the json file
-        output = self.path + '/' + file_name
+        output = self.path / file_name
 
         # If the path exist, converts the json file into a python dictionary and returns it
         if os.path.exists(self.path):
