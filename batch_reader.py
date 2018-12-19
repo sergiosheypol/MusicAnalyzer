@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 class BatchReader:
-    def __init__(self, folder_path):
+    def __init__(self, folder_path, genre):
 
         # Check if folder exists
         if not os.path.exists(folder_path):
@@ -15,12 +15,14 @@ class BatchReader:
         # Where to find the mp3 files
         self.path = folder_path
 
+        # Genre name
+        self.genre = genre
+
         # Names of the files in that folder
         self.files = os.listdir(folder_path)
 
         # DataFrames to store the data
         self.database = None
-        self.avg_values = None
 
     # Analyze a music folder
     def run(self):
@@ -37,11 +39,11 @@ class BatchReader:
             tp = measures['True Peak']['Peak']
             lufs = measures['Integrated Loudness']['I']
 
-            analyzed_tracks_database.append([track, lufs, tp])
+            analyzed_tracks_database.append([track, lufs, tp, self.genre])
             print(track + " has been added successfully")
 
         # Create DataFrame
-        df = pd.DataFrame(analyzed_tracks_database, columns=['name', 'lufs', 'tp'])
+        df = pd.DataFrame(analyzed_tracks_database, columns=['name', 'lufs', 'tp', 'genre'])
         df.set_index('name', inplace=True)
 
         # Check if the database exists or if it is None
@@ -59,20 +61,18 @@ class BatchReader:
 
         # Creating the paths
         database_path = Path(file_path) / 'database.json'
-        avg_values_path = Path(file_path) / 'avg.json'
 
         # Checking if everything's not null
-        if not self.database.empty:
+        if isinstance(self.database, pd.DataFrame):
             self.database.to_json(database_path, orient='index')
-
-        if not self.avg_values.empty:
-            self.avg_values.to_json(avg_values_path, orient='records')
 
     # Add an existing database
     def add_existing_database(self, folder_path):
 
+        # Path to database
         db_path = Path(folder_path) / 'database.json'
 
+        # Check if the file exists
         if not os.path.isfile(db_path):
             print('The file does not exist')
             return False
@@ -87,13 +87,6 @@ class BatchReader:
 
         self.database.index.name = 'name'
 
-        print('LUFS database imported correctly')
+        print('Database imported correctly')
         return True
 
-    def calculate_average_values(self):
-        # Calculate average values
-        stats = self.database.mean()
-
-        # Store new values
-        aux_avg = [{'lufs': stats.lufs, 'tp': stats.tp}]
-        self.avg_values = pd.DataFrame(aux_avg)
