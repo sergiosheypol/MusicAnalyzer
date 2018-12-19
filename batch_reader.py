@@ -69,7 +69,7 @@ class BatchReader:
             self.avg_values.to_json(avg_values_path, orient='records')
 
     # Add an existing database
-    def add_existing_lufs_database(self, folder_path):
+    def add_existing_database(self, folder_path):
 
         db_path = Path(folder_path) / 'database.json'
 
