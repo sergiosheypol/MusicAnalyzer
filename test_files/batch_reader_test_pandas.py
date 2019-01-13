@@ -8,7 +8,7 @@
 from batch_reader import BatchReader
 
 # EDM
-reader = BatchReader('../audio_files/rock')
+# reader = BatchReader('../audio_files/trap', 'trap')
 
 # reader.export('output/edm')
 # print(reader.average_tp)
@@ -24,3 +24,10 @@ reader = BatchReader('../audio_files/rock')
 # reader.calculate_average_values()
 # print(reader.avg_values)
 # reader.export('../genres_database/edm_t')
+
+
+# Adding TRAP
+reader = BatchReader('../audio_files/trap', 'trap')
+reader.add_existing_database('../genres_database')
+reader.run()
+reader.export('../genres_database')
