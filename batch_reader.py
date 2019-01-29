@@ -60,17 +60,17 @@ class BatchReader:
             os.mkdir(Path(file_path))
 
         # Creating the paths
-        database_path = Path(file_path) / 'database.json'
+        database_path = Path(file_path) / 'database_multigenre.json'
 
         # Checking if everything's not null
         if isinstance(self.database, pd.DataFrame):
             self.database.to_json(database_path, orient='index')
 
     # Add an existing database
-    def add_existing_database(self, folder_path):
+    def add_existing_database(self, folder_path, db_name):
 
         # Path to database
-        db_path = Path(folder_path) / 'database.json'
+        db_path = Path(folder_path) / db_name
 
         # Check if the file exists
         if not os.path.isfile(db_path):
