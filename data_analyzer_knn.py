@@ -27,7 +27,7 @@ class DataAnalyzer:
         self.y_test = None
 
         # kNN Classifier
-        self.knn = KNeighborsClassifier(n_neighbors=20)
+        self.knn = KNeighborsClassifier(n_neighbors=12)
 
     def train_models(self):
 
