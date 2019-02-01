@@ -3,11 +3,12 @@ from bpm_analyzer import BPMAnalyzer
 import os
 import pandas as pd
 from pathlib import Path
-from sklearn.neighbors import KNeighborsClassifier
+# from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 
 
-class DataAnalyzer:
+class DataAnalyzerSVC:
 
     def __init__(self, database_path, database_file_name):
 
@@ -28,7 +29,7 @@ class DataAnalyzer:
         self.y_test = None
 
         # kNN Classifier
-        self.knn = KNeighborsClassifier(n_neighbors=20)
+        self.svc = SVC(gamma='auto')
 
     def train_models(self):
 
@@ -40,14 +41,14 @@ class DataAnalyzer:
         self.x_train, self.x_test, self.y_train, self.y_test = train_test_split(x, y, test_size=0.2, random_state=1,
                                                                                 stratify=y)
         # Training
-        self.knn.fit(self.x_train, self.y_train)
+        self.svc.fit(self.x_train, self.y_train)
 
     '''
     Testing the algorithm with the 20% of the dataset
     '''
 
     def predict_genre_test(self):
-        return self.knn.predict(self.x_test)
+        return self.svc.predict(self.x_test)
 
     '''
     Predicting the genre of a single track
@@ -72,7 +73,6 @@ class DataAnalyzer:
         bpm = bpm_a.get_bpm_single(track_name)
         print(bpm)
 
-
         # Creating the row for the dataframe
         track_values = [{'name': track_name, 'lufs': lufs, 'tp': tp, 'bpm': bpm}]
 
@@ -81,11 +81,11 @@ class DataAnalyzer:
         track_df.set_index('name', inplace=True)
 
         # Executing the kNN algorithm
-        return self.knn.predict(track_df)
+        return self.svc.predict(track_df)
 
     '''
     Getting the accuracy of the system
     '''
 
     def calculate_accuracy(self):
-        return self.knn.score(self.x_test, self.y_test)
+        return self.svc.score(self.x_test, self.y_test)

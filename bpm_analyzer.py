@@ -4,7 +4,7 @@ import os
 import pandas as pd
 
 
-class bpm_analyzer:
+class BPMAnalyzer:
 
     def __init__(self, folder_path):
         self.fp = Path(folder_path)

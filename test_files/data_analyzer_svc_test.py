@@ -1,4 +1,4 @@
-from data_analyzer_knn import DataAnalyzer
+from data_analyzer_svc import DataAnalyzerSVC
 from batch_reader import BatchReader
 
 # Filling the DB
@@ -11,7 +11,7 @@ from batch_reader import BatchReader
 # br.run()
 # br.export('../genres_database')
 
-d_analyzer = DataAnalyzer('../genres_database', 'database.json')
+d_analyzer = DataAnalyzerSVC('../genres_database', 'database.json')
 
 d_analyzer.train_models()
 print(d_analyzer.x_test)

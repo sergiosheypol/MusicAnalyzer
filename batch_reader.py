@@ -2,7 +2,7 @@ from audio_meters import AudioMeters
 import os
 import pandas as pd
 from pathlib import Path
-from bpm_analyzer import bpm_analyzer
+from bpm_analyzer import BPMAnalyzer
 
 
 class BatchReader:
@@ -41,7 +41,7 @@ class BatchReader:
             lufs = measures['Integrated Loudness']['I']
 
             # Extracting BPM
-            bpm_a = bpm_analyzer(self.path)
+            bpm_a = BPMAnalyzer(self.path)
             bpm = bpm_a.get_bpm_single(track)
 
             analyzed_tracks_database.append([track, bpm, lufs, tp, self.genre])
@@ -58,14 +58,14 @@ class BatchReader:
             self.database = self.database.append(df, ignore_index=False)
 
     # Export the results into JSON
-    def export(self, file_path):
+    def export(self, file_path, db_name):
 
         # Create the folder if it does not exist
         if not os.path.exists(Path(file_path)):
             os.mkdir(Path(file_path))
 
         # Creating the paths
-        database_path = Path(file_path) / 'database.json'
+        database_path = Path(file_path) / db_name
 
         # Checking if everything's not null
         if isinstance(self.database, pd.DataFrame):

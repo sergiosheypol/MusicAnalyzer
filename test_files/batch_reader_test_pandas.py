@@ -27,7 +27,7 @@ from batch_reader import BatchReader
 
 
 # Adding TRAP
-reader = BatchReader('../audio_files/Rock', 'Rock')
-reader.add_existing_database('../genres_database', 'filtered_trap_no_130.json')
+reader = BatchReader('../audio_files/PopRock', 'PopRock')
+# reader.add_existing_database('../genres_database', 'filtered_trap_no_130.json')
 reader.run()
-reader.export('../genres_database')
+reader.export('../genres_database', 'db_poprock.json')
