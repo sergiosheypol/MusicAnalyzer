@@ -2,6 +2,7 @@ from audio_meters import AudioMeters
 import os
 import pandas as pd
 from pathlib import Path
+from bpm_analyzer import bpm_analyzer
 
 
 class BatchReader:
@@ -39,11 +40,15 @@ class BatchReader:
             tp = measures['True Peak']['Peak']
             lufs = measures['Integrated Loudness']['I']
 
-            analyzed_tracks_database.append([track, lufs, tp, self.genre])
+            # Extracting BPM
+            bpm_a = bpm_analyzer(self.path)
+            bpm = bpm_a.get_bpm_single(track)
+
+            analyzed_tracks_database.append([track, bpm, lufs, tp, self.genre])
             print(track + " has been added successfully")
 
         # Create DataFrame
-        df = pd.DataFrame(analyzed_tracks_database, columns=['name', 'lufs', 'tp', 'genre'])
+        df = pd.DataFrame(analyzed_tracks_database, columns=['name', 'bpm', 'lufs', 'tp', 'genre'])
         df.set_index('name', inplace=True)
 
         # Check if the database exists or if it is None
@@ -60,7 +65,7 @@ class BatchReader:
             os.mkdir(Path(file_path))
 
         # Creating the paths
-        database_path = Path(file_path) / 'database_multigenre_300119.json'
+        database_path = Path(file_path) / 'database.json'
 
         # Checking if everything's not null
         if isinstance(self.database, pd.DataFrame):

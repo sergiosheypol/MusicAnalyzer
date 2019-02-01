@@ -514,5 +514,41 @@
     "genre": "EDM",
     "lufs": -5.2,
     "tp": 2.7
+  },
+  "All Star - Smash Mouth.mp3": {
+    "bpm": 103.9770507812,
+    "genre": "Rock",
+    "lufs": -10.2,
+    "tp": 1.5
+  },
+  "Highway To Hell - ACDC.mp3": {
+    "bpm": 115.475730896,
+    "genre": "Rock",
+    "lufs": -9.9,
+    "tp": 1.2
+  },
+  "It's My Life - Bon Jovi.mp3": {
+    "bpm": 120.0491485596,
+    "genre": "Rock",
+    "lufs": -7.6,
+    "tp": 0.5
+  },
+  "Living On A Prayer - Bon Jovi.mp3": {
+    "bpm": 123.1137084961,
+    "genre": "Rock",
+    "lufs": -18.7,
+    "tp": -6.8
+  },
+  "The Final Countdown - The Europe.mp3": {
+    "bpm": 117.5871810913,
+    "genre": "Rock",
+    "lufs": -10.5,
+    "tp": 1.4
+  },
+  "You're Gonna Go Far Kid - The Offspring.mp3": {
+    "bpm": 125.9572067261,
+    "genre": "Rock",
+    "lufs": -6.7,
+    "tp": 1.8
   }
 }

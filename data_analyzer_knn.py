@@ -1,4 +1,5 @@
 from audio_meters import AudioMeters
+from bpm_analyzer import bpm_analyzer
 import os
 import pandas as pd
 from pathlib import Path
@@ -27,7 +28,7 @@ class DataAnalyzer:
         self.y_test = None
 
         # kNN Classifier
-        self.knn = KNeighborsClassifier(n_neighbors=12)
+        self.knn = KNeighborsClassifier(n_neighbors=20)
 
     def train_models(self):
 
@@ -66,8 +67,14 @@ class DataAnalyzer:
         lufs = measures['Integrated Loudness']['I']
         tp = measures['True Peak']['Peak']
 
+        # Extracting BPM
+        bpm_a = bpm_analyzer(folder_path)
+        bpm = bpm_a.get_bpm_single(track_name)
+        print(bpm)
+
+
         # Creating the row for the dataframe
-        track_values = [{'name': track_name, 'lufs': lufs, 'tp': tp}]
+        track_values = [{'name': track_name, 'lufs': lufs, 'tp': tp, 'bpm': bpm}]
 
         # Creating new DataFrame
         track_df = pd.DataFrame(track_values)

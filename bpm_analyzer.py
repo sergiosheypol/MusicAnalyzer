@@ -43,6 +43,19 @@ class bpm_analyzer:
         else:
             self.df = self.df.append(df, ignore_index=False)
 
+    def get_bpm_single(self, track_name):
+
+        path_to_track = self.fp / track_name
+
+        audio = MonoLoader(filename=str(path_to_track))()
+
+        r_y = RhythmExtractor2013(method="multifeature")
+
+        bpm, beats, beats_confidence, _, beats_intervals = r_y(audio)
+
+        return bpm
+
+
     def export(self, file_path):
 
         # Create the folder if it does not exist

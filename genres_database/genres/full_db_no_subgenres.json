@@ -17,11 +17,23 @@
     "lufs": -11.4,
     "tp": 1.1
   },
+  "21 Savage, Offset, Metro Boomin - Ric Flair Drip.mp3": {
+    "bpm": 99.9947738647,
+    "genre": "Trap",
+    "lufs": -11.3,
+    "tp": 0.2
+  },
   "BlocBoy JB &amp; Drake Look Alive.mp3": {
     "bpm": 139.9893951416,
     "genre": "Trap",
     "lufs": -12.8,
     "tp": 1.5
+  },
+  "Denzel Curry - Ultimate.mp3": {
+    "bpm": 114.0008468628,
+    "genre": "Trap",
+    "lufs": -8.2,
+    "tp": 0.9
   },
   "Kendrick Lamar - M.A.A.D. City.mp3": {
     "bpm": 148.9789276123,
@@ -34,6 +46,18 @@
     "genre": "Trap",
     "lufs": -9.0,
     "tp": 1.6
+  },
+  "Migos - Bad and Boujee ft Lil Uzi Vert.mp3": {
+    "bpm": 127.0275192261,
+    "genre": "Trap",
+    "lufs": -9.1,
+    "tp": 1.2
+  },
+  "Migos - Kelly Price ft Travis Scott.mp3": {
+    "bpm": 122.0562820435,
+    "genre": "Trap",
+    "lufs": -9.0,
+    "tp": 1.8
   },
   "Migos - Slippery feat. Gucci Mane.mp3": {
     "bpm": 142.0865020752,
@@ -65,6 +89,12 @@
     "lufs": -9.4,
     "tp": 1.2
   },
+  "Rae Sremmurd - No Type.mp3": {
+    "bpm": 124.0953445435,
+    "genre": "Trap",
+    "lufs": -10.2,
+    "tp": 1.1
+  },
   "Travis Scott - SICKO MODE ft. Drake.mp3": {
     "bpm": 154.7720184326,
     "genre": "Trap",
@@ -77,53 +107,17 @@
     "lufs": -10.7,
     "tp": 1.1
   },
+  "Young Thug With That featuring Duke.mp3": {
+    "bpm": 123.4288330078,
+    "genre": "Trap",
+    "lufs": -10.0,
+    "tp": 2.1
+  },
   "Young Thug, Travis Scott - Pick Up the Phone  ft. Quavo.mp3": {
     "bpm": 136.9027709961,
     "genre": "Trap",
     "lufs": -10.0,
     "tp": -0.3
-  },
-  "10. Bad Bunny - Cuando Perriabas.mp3": {
-    "bpm": 163.9971618652,
-    "genre": "Trap",
-    "lufs": -11.0,
-    "tp": 0.6
-  },
-  "2. Bad Bunny Ft. Diplo - 200 MPH.mp3": {
-    "bpm": 161.5501708984,
-    "genre": "Trap",
-    "lufs": -9.6,
-    "tp": 0.0
-  },
-  "3. Bad Bunny - Quien Tu Eres.mp3": {
-    "bpm": 136.5882263184,
-    "genre": "Trap",
-    "lufs": -10.6,
-    "tp": 0.2
-  },
-  "4. Bad Bunny - Caro.mp3": {
-    "bpm": 161.6990356445,
-    "genre": "Trap",
-    "lufs": -10.3,
-    "tp": 0.5
-  },
-  "5. Bad Bunny - Tenemos Que Hablar.mp3": {
-    "bpm": 146.1017913818,
-    "genre": "Trap",
-    "lufs": -10.6,
-    "tp": 1.0
-  },
-  "7. Bad Bunny - Ser Bichote.mp3": {
-    "bpm": 154.7449188232,
-    "genre": "Trap",
-    "lufs": -9.9,
-    "tp": 0.0
-  },
-  "8. Bad Bunny - Si Estuvieremos Juntos.mp3": {
-    "bpm": 172.2657318115,
-    "genre": "Trap",
-    "lufs": -10.1,
-    "tp": 0.4
   },
   "Axwell, Ingrosso Ft. Romans - Dancing Alone (Brohug Extended Remix) [SWM].mp3": {
     "bpm": 124.1809616089,
@@ -274,6 +268,96 @@
     "genre": "EDM",
     "lufs": -6.9,
     "tp": 1.5
+  },
+  "1. Bad Bunny - Ni Bien Ni Mal.mp3": {
+    "bpm": 128.1512145996,
+    "genre": "Trap",
+    "lufs": -11.6,
+    "tp": 1.0
+  },
+  "10. Bad Bunny - Cuando Perriabas.mp3": {
+    "bpm": 163.9971618652,
+    "genre": "Trap",
+    "lufs": -11.0,
+    "tp": 0.6
+  },
+  "11. Bad Bunny Ft. El Alfa - La Romana.mp3": {
+    "bpm": 117.9066619873,
+    "genre": "Trap",
+    "lufs": -8.9,
+    "tp": 1.4
+  },
+  "12. Bad Bunny - Como Antes.mp3": {
+    "bpm": 103.8449783325,
+    "genre": "Trap",
+    "lufs": -11.5,
+    "tp": 0.0
+  },
+  "13. Bad Bunny - RLNDT.mp3": {
+    "bpm": 107.8981323242,
+    "genre": "Trap",
+    "lufs": -9.2,
+    "tp": -0.3
+  },
+  "14. Bad Bunny - Estamos Bien.mp3": {
+    "bpm": 120.1199417114,
+    "genre": "Trap",
+    "lufs": -8.8,
+    "tp": 0.0
+  },
+  "15. Bad Bunny Ft. Drake - Mia.mp3": {
+    "bpm": 97.046875,
+    "genre": "Trap",
+    "lufs": -8.2,
+    "tp": 1.1
+  },
+  "2. Bad Bunny Ft. Diplo - 200 MPH.mp3": {
+    "bpm": 161.5501708984,
+    "genre": "Trap",
+    "lufs": -9.6,
+    "tp": 0.0
+  },
+  "3. Bad Bunny - Quien Tu Eres.mp3": {
+    "bpm": 136.5882263184,
+    "genre": "Trap",
+    "lufs": -10.6,
+    "tp": 0.2
+  },
+  "4. Bad Bunny - Caro.mp3": {
+    "bpm": 161.6990356445,
+    "genre": "Trap",
+    "lufs": -10.3,
+    "tp": 0.5
+  },
+  "5. Bad Bunny - Tenemos Que Hablar.mp3": {
+    "bpm": 146.1017913818,
+    "genre": "Trap",
+    "lufs": -10.6,
+    "tp": 1.0
+  },
+  "6. Bad Bunny - Otra Noche En Miami.mp3": {
+    "bpm": 89.944190979,
+    "genre": "Trap",
+    "lufs": -9.7,
+    "tp": 0.4
+  },
+  "7. Bad Bunny - Ser Bichote.mp3": {
+    "bpm": 154.7449188232,
+    "genre": "Trap",
+    "lufs": -9.9,
+    "tp": 0.0
+  },
+  "8. Bad Bunny - Si Estuvieremos Juntos.mp3": {
+    "bpm": 172.2657318115,
+    "genre": "Trap",
+    "lufs": -10.1,
+    "tp": 0.4
+  },
+  "9. Bad Bunny - Solo De Mi.mp3": {
+    "bpm": 89.9545593262,
+    "genre": "Trap",
+    "lufs": -9.0,
+    "tp": 1.0
   },
   "!!Despacito - Luis Fonsi & Daddy Yankee.mp3": {
     "bpm": 89.100112915,

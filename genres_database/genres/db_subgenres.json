@@ -1,518 +1,602 @@
 {
   "21 Savage &amp; Metro Boomin - No Heart.mp3": {
-    "bpm": 139.8849639893,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -11.1,
-    "tp": 1.1
+    "tp": 1.1,
+    "bpm": 139.8849639893
   },
   "21 Savage &amp; Metro Boomin - X ft Future.mp3": {
-    "bpm": 148.8330078125,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -13.5,
-    "tp": -0.1
+    "tp": -0.1,
+    "bpm": 148.8330078125
   },
   "21 Savage - Bank Account.mp3": {
-    "bpm": 150.1461029053,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -11.4,
-    "tp": 1.1
+    "tp": 1.1,
+    "bpm": 150.1461029053
+  },
+  "21 Savage, Offset, Metro Boomin - Ric Flair Drip.mp3": {
+    "genre": "AmericanTrap",
+    "lufs": -11.3,
+    "tp": 0.2,
+    "bpm": 99.9947738647
   },
   "BlocBoy JB &amp; Drake Look Alive.mp3": {
-    "bpm": 139.9893951416,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -12.8,
-    "tp": 1.5
+    "tp": 1.5,
+    "bpm": 139.9893951416
+  },
+  "Denzel Curry - Ultimate.mp3": {
+    "genre": "AmericanTrap",
+    "lufs": -8.2,
+    "tp": 0.9,
+    "bpm": 114.0008468628
   },
   "Kendrick Lamar - M.A.A.D. City.mp3": {
-    "bpm": 148.9789276123,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -9.1,
-    "tp": 1.8
+    "tp": 1.8,
+    "bpm": 148.9789276123
   },
   "Lil Uzi Vert - XO Tour Llif3.mp3": {
-    "bpm": 154.6725311279,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -9.0,
-    "tp": 1.6
+    "tp": 1.6,
+    "bpm": 154.6725311279
+  },
+  "Migos - Bad and Boujee ft Lil Uzi Vert.mp3": {
+    "genre": "AmericanTrap",
+    "lufs": -9.1,
+    "tp": 1.2,
+    "bpm": 127.0275192261
+  },
+  "Migos - Kelly Price ft Travis Scott.mp3": {
+    "genre": "AmericanTrap",
+    "lufs": -9.0,
+    "tp": 1.8,
+    "bpm": 122.0562820435
   },
   "Migos - Slippery feat. Gucci Mane.mp3": {
-    "bpm": 142.0865020752,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -9.0,
-    "tp": 1.9
+    "tp": 1.9,
+    "bpm": 142.0865020752
   },
   "Migos - T-Shirt.mp3": {
-    "bpm": 137.3815765381,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -8.4,
-    "tp": 2.2
+    "tp": 2.2,
+    "bpm": 137.3815765381
   },
   "Migos - Walk It Talk It  ft. Drake.mp3": {
-    "bpm": 146.235244751,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -9.1,
-    "tp": 2.4
+    "tp": 2.4,
+    "bpm": 146.235244751
   },
   "Migos, Nicki Minaj, Cardi B - MotorSport.mp3": {
-    "bpm": 138.0459747314,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -9.6,
-    "tp": 0.7
+    "tp": 0.7,
+    "bpm": 138.0459747314
   },
   "Rae Sremmurd - Black Beatles ft. Gucci Mane.mp3": {
-    "bpm": 144.9498901367,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -9.4,
-    "tp": 1.2
+    "tp": 1.2,
+    "bpm": 144.9498901367
+  },
+  "Rae Sremmurd - No Type.mp3": {
+    "genre": "AmericanTrap",
+    "lufs": -10.2,
+    "tp": 1.1,
+    "bpm": 124.0953445435
   },
   "Travis Scott - SICKO MODE ft. Drake.mp3": {
-    "bpm": 154.7720184326,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -8.4,
-    "tp": 2.8
+    "tp": 2.8,
+    "bpm": 154.7720184326
   },
   "XXXTENTACION - Look At Me!.mp3": {
-    "bpm": 139.0400085449,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -10.7,
-    "tp": 1.1
+    "tp": 1.1,
+    "bpm": 139.0400085449
+  },
+  "Young Thug With That featuring Duke.mp3": {
+    "genre": "AmericanTrap",
+    "lufs": -10.0,
+    "tp": 2.1,
+    "bpm": 123.4288330078
   },
   "Young Thug, Travis Scott - Pick Up the Phone  ft. Quavo.mp3": {
-    "bpm": 136.9027709961,
-    "genre": "Trap",
+    "genre": "AmericanTrap",
     "lufs": -10.0,
-    "tp": -0.3
-  },
-  "10. Bad Bunny - Cuando Perriabas.mp3": {
-    "bpm": 163.9971618652,
-    "genre": "Trap",
-    "lufs": -11.0,
-    "tp": 0.6
-  },
-  "2. Bad Bunny Ft. Diplo - 200 MPH.mp3": {
-    "bpm": 161.5501708984,
-    "genre": "Trap",
-    "lufs": -9.6,
-    "tp": 0.0
-  },
-  "3. Bad Bunny - Quien Tu Eres.mp3": {
-    "bpm": 136.5882263184,
-    "genre": "Trap",
-    "lufs": -10.6,
-    "tp": 0.2
-  },
-  "4. Bad Bunny - Caro.mp3": {
-    "bpm": 161.6990356445,
-    "genre": "Trap",
-    "lufs": -10.3,
-    "tp": 0.5
-  },
-  "5. Bad Bunny - Tenemos Que Hablar.mp3": {
-    "bpm": 146.1017913818,
-    "genre": "Trap",
-    "lufs": -10.6,
-    "tp": 1.0
-  },
-  "7. Bad Bunny - Ser Bichote.mp3": {
-    "bpm": 154.7449188232,
-    "genre": "Trap",
-    "lufs": -9.9,
-    "tp": 0.0
-  },
-  "8. Bad Bunny - Si Estuvieremos Juntos.mp3": {
-    "bpm": 172.2657318115,
-    "genre": "Trap",
-    "lufs": -10.1,
-    "tp": 0.4
+    "tp": -0.3,
+    "bpm": 136.9027709961
   },
   "Axwell, Ingrosso Ft. Romans - Dancing Alone (Brohug Extended Remix) [SWM].mp3": {
-    "bpm": 124.1809616089,
-    "genre": "EDM",
+    "genre": "BassHouse",
     "lufs": -6.3,
-    "tp": 2.5
+    "tp": 2.5,
+    "bpm": 124.1809616089
   },
   "BROHUG - Running (Original Mix).mp3": {
-    "bpm": 123.9837036133,
-    "genre": "EDM",
+    "genre": "BassHouse",
     "lufs": -6.6,
-    "tp": 3.3
+    "tp": 3.3,
+    "bpm": 123.9837036133
   },
   "Chocolate Puma & Tommie Sunshine - Tear This Mother Down (Extended Mix) (feat. MX2).mp3": {
-    "bpm": 128.6561126709,
-    "genre": "EDM",
+    "genre": "BassHouse",
     "lufs": -6.2,
-    "tp": 1.6
+    "tp": 1.6,
+    "bpm": 128.6561126709
   },
   "Chocolate Puma, Carta, Kris Kiss - Bump (Extended Mix).mp3": {
-    "bpm": 128.5696258545,
-    "genre": "EDM",
+    "genre": "BassHouse",
     "lufs": -6.7,
-    "tp": 1.2
+    "tp": 1.2,
+    "bpm": 128.5696258545
   },
   "Dyro \u2014 Bring It Down (Original Mix).mp3": {
-    "bpm": 124.3658294678,
-    "genre": "EDM",
+    "genre": "BassHouse",
     "lufs": -5.5,
-    "tp": 3.7
+    "tp": 3.7,
+    "bpm": 124.3658294678
   },
   "Valentino Khan - Lick It (Original Mix)  .MP3": {
-    "bpm": 125.0125045776,
-    "genre": "EDM",
+    "genre": "BassHouse",
     "lufs": -5.3,
-    "tp": 3.7
+    "tp": 3.7,
+    "bpm": 125.0125045776
   },
   "Dannic, Inna - Stay (Dannic, LoaX Remix) [SWM].mp3": {
-    "bpm": 128.5896606445,
-    "genre": "EDM",
+    "genre": "FutureHouse",
     "lufs": -7.0,
-    "tp": 2.9
+    "tp": 2.9,
+    "bpm": 128.5896606445
   },
   "Don Diablo - Anthem (We Love House Music) (Extended Mix) [SWM].mp3": {
-    "bpm": 125.8766937256,
-    "genre": "EDM",
+    "genre": "FutureHouse",
     "lufs": -5.4,
-    "tp": 2.3
+    "tp": 2.3,
+    "bpm": 125.8766937256
   },
   "Dropgun - Dark Sky (Extended Mix).MP3": {
-    "bpm": 128.3842010498,
-    "genre": "EDM",
+    "genre": "FutureHouse",
     "lufs": -5.4,
-    "tp": 3.4
+    "tp": 3.4,
+    "bpm": 128.3842010498
   },
   "Mike Williams - Feels Like Yesterday (feat. Robin Valo) 4clubbers.pl.mp3": {
-    "bpm": 125.912612915,
-    "genre": "EDM",
+    "genre": "FutureHouse",
     "lufs": -7.6,
-    "tp": 3.0
+    "tp": 3.0,
+    "bpm": 125.912612915
   },
   "Mike Williams - Give It Up (Extended Mix) nuteczki.eu.mp3": {
-    "bpm": 126.0600128174,
-    "genre": "EDM",
+    "genre": "FutureHouse",
     "lufs": -8.6,
-    "tp": 2.7
+    "tp": 2.7,
+    "bpm": 126.0600128174
   },
   "OverthinkerSheypol.mp3": {
-    "bpm": 125.9818496704,
-    "genre": "EDM",
+    "genre": "FutureHouse",
     "lufs": -7.8,
-    "tp": 2.0
+    "tp": 2.0,
+    "bpm": 125.9818496704
   },
   "Steff Da Campo - Deeper Love (Extended Mix) [sickworldmusic].mp3": {
-    "bpm": 126.0070114136,
-    "genre": "EDM",
+    "genre": "FutureHouse",
     "lufs": -7.9,
-    "tp": 1.8
+    "tp": 1.8,
+    "bpm": 126.0070114136
   },
   "Tiesto & Dzeko ft. Preme & Post Malone - Jackie Chan (Extended Mix).mp3": {
-    "bpm": 128.0718841553,
-    "genre": "EDM",
+    "genre": "FutureHouse",
     "lufs": -7.0,
-    "tp": 2.4
+    "tp": 2.4,
+    "bpm": 128.0718841553
   },
   "Axwell \u039b Ingrosso - Dreamer (Matisse & Sadko Extended Mix).mp3": {
-    "bpm": 126.0046081543,
     "genre": "EDM",
     "lufs": -7.2,
-    "tp": 2.4
+    "tp": 2.4,
+    "bpm": 126.0046081543
   },
   "Brooks - Lynx (Extended Mix) synapsemusic.cc.mp3": {
-    "bpm": 127.959815979,
     "genre": "EDM",
     "lufs": -8.3,
-    "tp": 1.1
+    "tp": 1.1,
+    "bpm": 127.959815979
   },
   "Brooks, David Guetta, Martin Garrix - Like I Do (Extended) synapsemusic.cc.mp3": {
-    "bpm": 128.0030212402,
     "genre": "EDM",
     "lufs": -6.6,
-    "tp": 2.2
+    "tp": 2.2,
+    "bpm": 128.0030212402
   },
   "Julian Jordan, Alpharock - Zero Gravity (Original Mix).mp3": {
-    "bpm": 128.4372406006,
     "genre": "EDM",
     "lufs": -10.6,
-    "tp": 0.4
+    "tp": 0.4,
+    "bpm": 128.4372406006
   },
   "Martin Garrix & Dyro - Latency (Extended Mix) HouseElectroPP - FACEBOOK.mp3": {
-    "bpm": 128.581237793,
     "genre": "EDM",
     "lufs": -4.2,
-    "tp": 3.3
+    "tp": 3.3,
+    "bpm": 128.581237793
   },
   "Martin Garrix - Access (Extended Mix) [SWM].mp3": {
-    "bpm": 128.5206451416,
     "genre": "EDM",
     "lufs": -10.9,
-    "tp": 0.2
+    "tp": 0.2,
+    "bpm": 128.5206451416
   },
   "Martin Garrix, Bonn - High On Life (Original Mix) [SWM].mp3": {
-    "bpm": 128.0097503662,
     "genre": "EDM",
     "lufs": -8.0,
-    "tp": 0.8
+    "tp": 0.8,
+    "bpm": 128.0097503662
   },
   "Axwell \u039b Ingrosso - Dreamer (Extended Mix).MP3": {
-    "bpm": 126.0297317505,
-    "genre": "EDM",
+    "genre": "House",
     "lufs": -7.2,
-    "tp": 2.7
+    "tp": 2.7,
+    "bpm": 126.0297317505
   },
   "Brando, Loud Luxury - Body (Extended Mix).mp3": {
-    "bpm": 122.0699310303,
-    "genre": "EDM",
+    "genre": "House",
     "lufs": -7.6,
-    "tp": 2.9
+    "tp": 2.9,
+    "bpm": 122.0699310303
   },
   "Calvin Harris & Dua Lipa - One Kiss (Extended Mix) Cmp3.eu.mp3": {
-    "bpm": 123.5880584717,
-    "genre": "EDM",
+    "genre": "House",
     "lufs": -6.9,
-    "tp": 2.5
+    "tp": 2.5,
+    "bpm": 123.5880584717
   },
   "Mosimann - Low Pro (Antoine Delvig Extended Edit) [SWM].mp3": {
-    "bpm": 124.9636077881,
-    "genre": "EDM",
+    "genre": "House",
     "lufs": -6.9,
-    "tp": 1.5
+    "tp": 1.5,
+    "bpm": 124.9636077881
+  },
+  "1. Bad Bunny - Ni Bien Ni Mal.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -11.6,
+    "tp": 1.0,
+    "bpm": 128.1512145996
+  },
+  "10. Bad Bunny - Cuando Perriabas.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -11.0,
+    "tp": 0.6,
+    "bpm": 163.9971618652
+  },
+  "11. Bad Bunny Ft. El Alfa - La Romana.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -8.9,
+    "tp": 1.4,
+    "bpm": 117.9066619873
+  },
+  "12. Bad Bunny - Como Antes.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -11.5,
+    "tp": 0.0,
+    "bpm": 103.8449783325
+  },
+  "13. Bad Bunny - RLNDT.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -9.2,
+    "tp": -0.3,
+    "bpm": 107.8981323242
+  },
+  "14. Bad Bunny - Estamos Bien.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -8.8,
+    "tp": 0.0,
+    "bpm": 120.1199417114
+  },
+  "15. Bad Bunny Ft. Drake - Mia.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -8.2,
+    "tp": 1.1,
+    "bpm": 97.046875
+  },
+  "2. Bad Bunny Ft. Diplo - 200 MPH.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -9.6,
+    "tp": 0.0,
+    "bpm": 161.5501708984
+  },
+  "3. Bad Bunny - Quien Tu Eres.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -10.6,
+    "tp": 0.2,
+    "bpm": 136.5882263184
+  },
+  "4. Bad Bunny - Caro.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -10.3,
+    "tp": 0.5,
+    "bpm": 161.6990356445
+  },
+  "5. Bad Bunny - Tenemos Que Hablar.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -10.6,
+    "tp": 1.0,
+    "bpm": 146.1017913818
+  },
+  "6. Bad Bunny - Otra Noche En Miami.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -9.7,
+    "tp": 0.4,
+    "bpm": 89.944190979
+  },
+  "7. Bad Bunny - Ser Bichote.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -9.9,
+    "tp": 0.0,
+    "bpm": 154.7449188232
+  },
+  "8. Bad Bunny - Si Estuvieremos Juntos.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -10.1,
+    "tp": 0.4,
+    "bpm": 172.2657318115
+  },
+  "9. Bad Bunny - Solo De Mi.mp3": {
+    "genre": "LatinTrap",
+    "lufs": -9.0,
+    "tp": 1.0,
+    "bpm": 89.9545593262
   },
   "!!Despacito - Luis Fonsi & Daddy Yankee.mp3": {
-    "bpm": 89.100112915,
     "genre": "Reggaeton",
     "lufs": -8.5,
-    "tp": 0.9
+    "tp": 0.9,
+    "bpm": 89.100112915
   },
   "!!Ed Sheeran Ft. Zion Y Lennox - Shape Of You Remix.mp3": {
-    "bpm": 95.9921340942,
     "genre": "Reggaeton",
     "lufs": -6.5,
-    "tp": 2.9
+    "tp": 2.9,
+    "bpm": 95.9921340942
   },
   "07. Todo Comienza En La Disco (feat. Yandel y Daddy Yankee).mp3": {
-    "bpm": 91.9738845825,
     "genre": "Reggaeton",
     "lufs": -8.0,
-    "tp": 3.6
+    "tp": 3.6,
+    "bpm": 91.9738845825
   },
   "Aitana Ana Guerra - Lo Malo.mp3": {
-    "bpm": 94.9919967651,
     "genre": "Reggaeton",
     "lufs": -9.0,
-    "tp": 2.6
+    "tp": 2.6,
+    "bpm": 94.9919967651
   },
   "Aitana Ft Ana Guerra - Lo Malo (Dj Salva Garcia & Dj Alex Melero 2018 Edit).mp3": {
-    "bpm": 104.8985748291,
     "genre": "Reggaeton",
     "lufs": -8.7,
-    "tp": 3.1
+    "tp": 3.1,
+    "bpm": 104.8985748291
   },
   "Aitor Cruz - R\u00f3mpelo (Extended Version).mp3": {
-    "bpm": 89.9917984009,
     "genre": "Reggaeton",
     "lufs": -8.6,
-    "tp": 1.1
+    "tp": 1.1,
+    "bpm": 89.9917984009
   },
   "Ana Mena feat. Becky G & De La Ghetto - Ya Es Hora.mp3": {
-    "bpm": 99.6948165894,
     "genre": "Reggaeton",
     "lufs": -9.6,
-    "tp": 0.4
+    "tp": 0.4,
+    "bpm": 99.6948165894
   },
   "Anitta Ft. J Balvin - Downtown (Www.FlowHot.Net).mp3": {
-    "bpm": 83.0125656128,
     "genre": "Reggaeton",
     "lufs": -7.5,
-    "tp": 0.6
+    "tp": 0.6,
+    "bpm": 83.0125656128
   },
   "Baila Conmigo - Juan Magan ft Luciana.mp3": {
-    "bpm": 99.7567901611,
     "genre": "Reggaeton",
     "lufs": -9.1,
-    "tp": 1.4
+    "tp": 1.4,
+    "bpm": 99.7567901611
   },
   "Becky G feat. Natti Natasha  -  Sin Pijama.mp3": {
-    "bpm": 93.9101791382,
     "genre": "Reggaeton",
     "lufs": -6.9,
-    "tp": 2.0
+    "tp": 2.0,
+    "bpm": 93.9101791382
   },
   "Becky G Ft. Bad Bunny - Mayores.mp3": {
-    "bpm": 96.9395294189,
     "genre": "Reggaeton",
     "lufs": -7.5,
-    "tp": 1.6
+    "tp": 1.6,
+    "bpm": 96.9395294189
   },
   "Daddy Yankee - Dura (Www.FlowHoT.NeT).mp3": {
-    "bpm": 94.9642715454,
     "genre": "Reggaeton",
     "lufs": -14.8,
-    "tp": -4.1
+    "tp": -4.1,
+    "bpm": 94.9642715454
   },
   "Daddy Yankee - Gasolina.mp3": {
-    "bpm": 95.993309021,
     "genre": "Reggaeton",
     "lufs": -9.6,
-    "tp": 3.4
+    "tp": 3.4,
+    "bpm": 95.993309021
   },
   "Danny Ocean - Dembow.mp3": {
-    "bpm": 99.9004135132,
     "genre": "Reggaeton",
     "lufs": -9.1,
-    "tp": 0.9
+    "tp": 0.9,
+    "bpm": 99.9004135132
   },
   "Danny Ocean - Me Rehuso.mp3": {
-    "bpm": 105.0045318604,
     "genre": "Reggaeton",
     "lufs": -10.1,
-    "tp": 0.6
+    "tp": 0.6,
+    "bpm": 105.0045318604
   },
   "David Bisbal & Sebasti\u00e1n Yatra - A Partir De Hoy.mp3": {
-    "bpm": 162.7618713379,
     "genre": "Reggaeton",
     "lufs": -9.0,
-    "tp": 1.1
+    "tp": 1.1,
+    "bpm": 162.7618713379
   },
   "DJ Snake - Magenta Riddim (Original Mix) .mp3": {
-    "bpm": 102.0534591675,
     "genre": "Reggaeton",
     "lufs": -6.4,
-    "tp": 1.7
+    "tp": 1.7,
+    "bpm": 102.0534591675
   },
   "Duele el Corazon (feat. Wisin) - Enrique Iglesias.m4a": {
-    "bpm": 90.9473876953,
     "genre": "Reggaeton",
     "lufs": -6.2,
-    "tp": 2.2
+    "tp": 2.2,
+    "bpm": 90.9473876953
   },
   "El Amante - Nicky Jam.mp3": {
-    "bpm": 89.9186553955,
     "genre": "Reggaeton",
     "lufs": -10.0,
-    "tp": 1.3
+    "tp": 1.3,
+    "bpm": 89.9186553955
   },
   "Enrique Iglesias feat Pitbull - Move to Miami  BMF.mp3": {
-    "bpm": 99.9495239258,
     "genre": "Reggaeton",
     "lufs": -7.0,
-    "tp": 1.2
+    "tp": 1.2,
+    "bpm": 99.9495239258
   },
   "Enrique Iglesias Ft. Bad Bunny - El Ba\u00f1o (Www.FlowHoT.NeT).mp3": {
-    "bpm": 89.9572982788,
     "genre": "Reggaeton",
     "lufs": -7.3,
-    "tp": 0.9
+    "tp": 0.9,
+    "bpm": 89.9572982788
   },
   "J. Balvin - Ahora.mp3": {
-    "bpm": 87.8863754272,
     "genre": "Reggaeton",
     "lufs": -6.8,
-    "tp": 3.6
+    "tp": 3.6,
+    "bpm": 87.8863754272
   },
   "Joey-Montana-Ft-Sebastian-Yatra-Suena-El-Dembow.mp3": {
-    "bpm": 91.9485321045,
     "genre": "Reggaeton",
     "lufs": -8.7,
-    "tp": 2.0
+    "tp": 2.0,
+    "bpm": 91.9485321045
   },
   "Karol G - Mi Cama [ RoMuzica.net ].mp3": {
-    "bpm": 162.4705810547,
     "genre": "Reggaeton",
     "lufs": -8.3,
-    "tp": 1.1
+    "tp": 1.1,
+    "bpm": 162.4705810547
   },
   "Leslie Grace, Noriel - Duro y Suave (Www.FlowHoT.NeT).mp3": {
-    "bpm": 94.9768829346,
     "genre": "Reggaeton",
     "lufs": -7.7,
-    "tp": 0.5
+    "tp": 0.5,
+    "bpm": 94.9768829346
   },
   "Natti Natasha feat. Ozuna - Criminal.mp3": {
-    "bpm": 161.5671386719,
     "genre": "Reggaeton",
     "lufs": -7.6,
-    "tp": 2.0
+    "tp": 2.0,
+    "bpm": 161.5671386719
   },
   "Nicky Jam Ft. J Balvin - X (Www.FlowHot.Net).mp3": {
-    "bpm": 89.9689254761,
     "genre": "Reggaeton",
     "lufs": -9.7,
-    "tp": 1.1
+    "tp": 1.1,
+    "bpm": 89.9689254761
   },
   "No Me Acuerdo - Thal\u00eda ft. Natti Natasha (Con Letra).mp3": {
-    "bpm": 93.9600143433,
     "genre": "Reggaeton",
     "lufs": -9.5,
-    "tp": 2.3
+    "tp": 2.3,
+    "bpm": 93.9600143433
   },
   "Ozuna Ft. Manuel Turizo - Vaina Loca (Www.FlowHoT.NeT).mp3": {
-    "bpm": 93.9509429932,
     "genre": "Reggaeton",
     "lufs": -8.0,
-    "tp": 0.6
+    "tp": 0.6,
+    "bpm": 93.9509429932
   },
   "Shakira Ft. Maluma - Chantaje.mp3": {
-    "bpm": 101.97265625,
     "genre": "Reggaeton",
     "lufs": -7.9,
-    "tp": 0.3
+    "tp": 0.3,
+    "bpm": 101.97265625
   },
   "Te De Campana - Atomic.mp3": {
-    "bpm": 105.0168075562,
     "genre": "Reggaeton",
     "lufs": -6.9,
-    "tp": 5.1
+    "tp": 5.1,
+    "bpm": 105.0168075562
   },
   "\u00c9chame La Culpa.mp3": {
-    "bpm": 95.9516067505,
     "genre": "Reggaeton",
     "lufs": -8.2,
-    "tp": 2.2
+    "tp": 2.2,
+    "bpm": 95.9516067505
   },
   "Laidback Luke & Ale Mora - Milkshake (Better Than Yours) (Extended Mix).mp3": {
-    "bpm": 123.8912963867,
-    "genre": "EDM",
+    "genre": "TwistedHouse",
     "lufs": -7.2,
-    "tp": 2.6
+    "tp": 2.6,
+    "bpm": 123.8912963867
   },
   "Retrovision - Get Down (Extended Mix) synapsemusic.cc.mp3": {
-    "bpm": 127.9418640137,
-    "genre": "EDM",
+    "genre": "TwistedHouse",
     "lufs": -5.4,
-    "tp": 1.7
+    "tp": 1.7,
+    "bpm": 127.9418640137
   },
   "ADW.mp3": {
-    "bpm": 135.38671875,
-    "genre": "EDM",
+    "genre": "Uptempo",
     "lufs": -6.8,
-    "tp": 2.0
+    "tp": 2.0,
+    "bpm": 135.38671875
   },
   "Cardi B & Bad Bunny & J Balvin \u2014\u00a0I Like It (Dillon Francis Remix).mp3": {
-    "bpm": 150.0940856934,
-    "genre": "EDM",
+    "genre": "Uptempo",
     "lufs": -8.0,
-    "tp": 0.9
+    "tp": 0.9,
+    "bpm": 150.0940856934
   },
   "Cascada - Everytime We Touch (Hardwell, Maurice West Extended Remix) [SWM].mp3": {
-    "bpm": 145.2377166748,
-    "genre": "EDM",
+    "genre": "Uptempo",
     "lufs": -7.3,
-    "tp": 3.2
+    "tp": 3.2,
+    "bpm": 145.2377166748
   },
   "Gerald Le Funk, Subshock & Evangelos - 2BAE (Extended Mix) [sickworldmusic].mp3": {
-    "bpm": 135.4022674561,
-    "genre": "EDM",
+    "genre": "Uptempo",
     "lufs": -5.8,
-    "tp": 3.2
+    "tp": 3.2,
+    "bpm": 135.4022674561
   },
   "Hardwell  Timmy Trumpet - The Underground.mp3": {
-    "bpm": 149.9909820557,
-    "genre": "EDM",
+    "genre": "Uptempo",
     "lufs": -5.7,
-    "tp": 4.5
+    "tp": 4.5,
+    "bpm": 149.9909820557
   },
   "Steve Aoki & Laidback Luke - It's Time.mp3": {
-    "bpm": 150.9157409668,
-    "genre": "EDM",
+    "genre": "Uptempo",
     "lufs": -5.2,
-    "tp": 2.7
+    "tp": 2.7,
+    "bpm": 150.9157409668
   }
 }
