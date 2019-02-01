@@ -60,7 +60,7 @@ class BatchReader:
             os.mkdir(Path(file_path))
 
         # Creating the paths
-        database_path = Path(file_path) / 'database_multigenre.json'
+        database_path = Path(file_path) / 'database_multigenre_300119.json'
 
         # Checking if everything's not null
         if isinstance(self.database, pd.DataFrame):
