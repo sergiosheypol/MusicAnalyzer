@@ -72,6 +72,9 @@ class MFCCAnalyzer:
 
         # Creating new DataFrame
         file_df = pd.DataFrame(file_values)
+        file_df.set_index('element', inplace=True)
+        file_df = file_df.mfcc.apply(pd.Series)
+
 
         # Executing the kNN algorithm
         return self.knn.predict(file_df)
