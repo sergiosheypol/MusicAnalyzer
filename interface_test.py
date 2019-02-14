@@ -1,57 +1,78 @@
 import sys
-from data_analyzer_knn import DataAnalyzer
-from data_analyzer_svc import DataAnalyzerSVC
-from emotions_analyzer import EmotionsDetector
 
-if len(sys.argv) < 2 or len(sys.argv) > 3:
+# from data_analyzer_knn import DataAnalyzer
+# from data_analyzer_svc import DataAnalyzerSVC
+# from emotions_analyzer import EmotionsDetector
+# from batch_reader import BatchReader
 
+if len(sys.argv) < 2:
     sys.stderr.write("The command has not been introduced properly \n")
     sys.exit(-1)
 
-else:
-    mode = sys.argv[1]
-    clas = sys.argv[2]
-    path = sys.argv[3]
+mode = sys.argv[1]
+p2 = None
 
-    if mode == "-b" or mode == "-basic":
+if len(sys.argv) >= 3:
+    p2 = sys.argv[2]
 
-        ed = EmotionsDetector()
-        r = ed.get_emotions(path, '../emotions_models', 'speech_emotions_test')
-        print(r)
+if mode == "-b" or mode == "--basic":
+    print("Basic")
+    sys.exit(0)
 
-    elif mode == "-e" or mode == "-expert":
+if mode == "-e" or mode == "--expert":
+    print("Expert")
 
-        if clas == "-knn":
+    if p2 is None:
+        print(p2)
+        sys.stderr.write("Please, introduce a valid p2 \n")
+        sys.exit(-1)
 
-            d_analyzer = DataAnalyzer('../genres_database', 'database.json')
-            d_analyzer.train_models()
-            print(d_analyzer.x_test)
-            print(d_analyzer.y_test)
-            print(d_analyzer.predict_genre(path)) #esto seguramente esta mal pero no se como es
-            print(d_analyzer.calculate_accuracy())
+    if p2 == '-br' or p2 == '--batch_reader':
+        path = None
+        genre = None
+        option = None
 
-        elif clas == "-svc":
-
-            d_analyzer = DataAnalyzerSVC('../genres_database', 'database.json')
-            d_analyzer.train_models()
-            print(d_analyzer.x_test)
-            print(d_analyzer.y_test)
-            print(d_analyzer.predict_genre(path)) #esto seguramente esta mal pero no se como es
-            print(d_analyzer.calculate_accuracy())
-
-        else:
-            sys.stderr.write("Please, introduce a valid classifier \n")
+        if len(sys.argv) < 6:
+            print("Missing parameters")
             sys.exit(-1)
 
-    elif mode == "-h" or mode == "-help":
+        path = sys.argv[3]
+        genre = sys.argv[4]
+        option = sys.argv[5]
 
-        sys.stderr.write("The second parameter in the command is the mode in which you want to use the system: \n")
-        sys.stderr.write("-b or - basic for basic mode: in this case, the third parameter you have to introduce is ... \n")
-        sys.stderr.write("-e or - basic for expert mode: in this case, the third parameter you have to introduce is the classifier you want use: -knn or -svc \n")
-        sys.stderr.write("-h or -help for help mode \n")
-        sys.stderr.write("The fourth parameter is the path of the song you want to introduce in the system, if necessary \n")
+        #########################################
+        # br = BatchReader(path, genre)
+        #
+        #
+        #
+        ##########################################
 
-    else:
+        print("Todo ok Jose Luis")
+        sys.exit(0)
 
-        sys.stderr.write("The command has not been introduced properly \n")
-        sys.exit(-1)
+    if p2 == "-d" or p2 == "--data_analyzer":
+        print("Data analyzer")
+
+        sys.exit(0)
+
+    if p2 == "--svc":
+        print("--svc")
+
+        sys.exit(0)
+
+    sys.stderr.write("Please, introduce a valid sintax (Tip: --help)  \n")
+    sys.exit(-1)
+
+if mode == "-h" or mode == "--help":
+    sys.stderr.write("The second parameter in the command is the mode in which you want to use the system: \n")
+    sys.stderr.write("-b or --basic for basic mode: in this case, the third parameter you have to introduce is ... \n")
+    sys.stderr.write("-e or --expert for expert mode: in this case, the third parameter you have to introduce is the "
+                     "classifier you want use: -knn or -svc \n")
+    sys.stderr.write("-h or -help for help mode \n")
+    sys.stderr.write("The fourth parameter is the path of the song you want to introduce in the system, "
+                     "if necessary \n")
+#
+# else:
+#
+#     sys.stderr.write("The command has not been introduced properly \n")
+#     sys.exit(-1)
