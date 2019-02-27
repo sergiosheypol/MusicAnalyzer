@@ -19,8 +19,6 @@ def analyzer(batch_reader, add_database, run):
     path = batch_reader[0]
     genre = batch_reader[1]
 
-    existing_db_path = None
-    existing_db_name = None
     br = BatchReader(path, genre)
 
     if len(add_database) == 2:
@@ -45,7 +43,7 @@ def classifier(model, predict):
         d_analyzer = DataAnalyzer(model[0], None)
         d_analyzer.train_models(model[1])
         accuracy = d_analyzer.calculate_accuracy()
-        click.echo(accuracy)  # TEST ME!
+        click.echo(accuracy)
         return accuracy
 
     elif len(predict) == 3:
