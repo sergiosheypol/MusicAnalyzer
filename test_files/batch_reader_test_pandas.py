@@ -5,7 +5,7 @@
 # print(meter)
 
 
-from batch_reader import BatchReader
+from batch_analyzer import BatchAnalyzer
 
 # EDM
 # reader = BatchReader('../audio_files/trap', 'trap')
@@ -27,7 +27,7 @@ from batch_reader import BatchReader
 
 
 # Adding TRAP
-reader = BatchReader('../audio_files/PopRock', 'PopRock')
+reader = BatchAnalyzer('../audio_files/PopRock', 'PopRock')
 # reader.add_existing_database('../genres_database', 'filtered_trap_no_130.json')
 reader.run()
 reader.export('../genres_database', 'db_poprock.json')

@@ -1,7 +1,7 @@
 import subprocess
 
 
-class AudioMeters:
+class LoudnessAnalyzer:
 
     @staticmethod
     def get_loudness(file_location):

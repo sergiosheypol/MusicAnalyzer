@@ -5,7 +5,7 @@ import os
 import pandas as pd
 
 
-class AudioFeaturesExtractor:
+class MFCCSingleInstrumentAnalyzer:
 
     def __init__(self, folder_path, type_of_instrument):
         if not os.path.exists(folder_path):
@@ -85,7 +85,7 @@ class AudioFeaturesExtractor:
 # af.run()
 # af.export('mfcc_database/','database.json')
 
-af = AudioFeaturesExtractor('instruments_files/piano', 'piano')
+af = MFCCSingleInstrumentAnalyzer('instruments_files/piano', 'piano')
 af.add_existing_database('mfcc_database/', 'database.json')
 af.run()
 af.export('mfcc_database/', 'database.json')

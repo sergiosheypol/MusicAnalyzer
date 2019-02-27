@@ -1,4 +1,4 @@
-from mfcc_analyzer_knn import MFCCAnalyzer
+from knn_mfcc_instrument_classifier import MFCCAnalyzer
 import os
 
 d_analyzer = MFCCAnalyzer('../mfcc_database', 'database.json')

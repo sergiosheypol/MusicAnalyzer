@@ -1,5 +1,5 @@
-from data_analyzer_svc import DataAnalyzerSVC
-from batch_reader import BatchReader
+from svc_genre_classifier import SVCGenreClassifier
+from batch_analyzer import BatchAnalyzer
 
 # Filling the DB
 # br = BatchReader('../audio_files/AmericanTrap', 'AmericanTrap')
@@ -12,7 +12,7 @@ from batch_reader import BatchReader
 # br.export('../genres_database')
 
 # d_analyzer = DataAnalyzerSVC('../genres_database/database.json', None)
-d_analyzer = DataAnalyzerSVC(None, 'sv1')
+d_analyzer = SVCGenreClassifier(None, 'sv1')
 # d_analyzer.train_models('sv1')
 # print(d_analyzer.x_test)
 # print(d_analyzer.y_test)

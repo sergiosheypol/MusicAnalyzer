@@ -1,4 +1,4 @@
-from bpm_analyzer import BPMAnalyzer
+from audio_features_bpm_analyzer import BPMAnalyzer
 
 # b = bpm_analyzer('../audio_files/BassHouse')
 #

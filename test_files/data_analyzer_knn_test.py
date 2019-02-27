@@ -1,5 +1,5 @@
-from data_analyzer_knn import DataAnalyzer
-from batch_reader import BatchReader
+from knn_genre_classifier import KNNGenreClassifier
+from batch_analyzer import BatchAnalyzer
 
 # Filling the DB
 # br = BatchReader('../audio_files/AmericanTrap', 'AmericanTrap')
@@ -15,7 +15,7 @@ from batch_reader import BatchReader
 #
 # d_analyzer.train_models()
 
-d_analyzer = DataAnalyzer(None, 'testfile')
+d_analyzer = KNNGenreClassifier(None, 'testfile')
 # print(d_analyzer.predict_genre('test_tracks', 'MiGente.mp3'))
 print(d_analyzer.calculate_accuracy())
 

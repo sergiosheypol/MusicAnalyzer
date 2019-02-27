@@ -72,7 +72,7 @@ class TrackMFCCExtractor:
 #####################################################
 ####################### TEST ########################
 #####################################################
-tfe = TrackMFCCExtractor('audio_files/EDM/Martin Garrix, Bonn - High On Life (Original Mix) [SWM].mp3')
-tfe.run()
-tfe.export('mfcc_database/mfcc_db_tracks')
-tfe.plot()
+# tfe = TrackMFCCExtractor('audio_files/EDM/Martin Garrix, Bonn - High On Life (Original Mix) [SWM].mp3')
+# tfe.run()
+# tfe.export('mfcc_database/mfcc_db_tracks')
+# tfe.plot()

@@ -1,15 +1,14 @@
-from audio_meters import AudioMeters
-from bpm_analyzer import BPMAnalyzer
+from audio_features_loudness_analyzer import LoudnessAnalyzer
+from audio_features_bpm_analyzer import BPMAnalyzer
 import os
 import pandas as pd
 from pathlib import Path
-# from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from joblib import dump, load
 
 
-class DataAnalyzerSVC:
+class KNNGenreClassifier:
 
     def __init__(self, database_path, trained_model_path):
 
@@ -35,7 +34,7 @@ class DataAnalyzerSVC:
         self.y_test = None
 
         # kNN Classifier
-        self.svc = SVC(gamma='auto')
+        self.knn = KNeighborsClassifier(n_neighbors=20)
 
     def train_models(self, model_name):
 
@@ -47,17 +46,17 @@ class DataAnalyzerSVC:
         self.x_train, self.x_test, self.y_train, self.y_test = train_test_split(x, y, test_size=0.2, random_state=1,
                                                                                 stratify=y)
         # Training
-        self.svc.fit(self.x_train, self.y_train)
+        self.knn.fit(self.x_train, self.y_train)
 
         # Export model
-        self.export_classifier(self.svc, model_name)
+        self.export_classifier(self.knn, model_name)
 
     '''
     Testing the algorithm with the 20% of the dataset
     '''
 
     def predict_genre_test(self):
-        return self.svc.predict(self.x_test)
+        return self.knn.predict(self.x_test)
 
     '''
     Predicting the genre of a single track
@@ -71,7 +70,7 @@ class DataAnalyzerSVC:
             return 'The file does not exist'
 
         # Given track parameters
-        measures = AudioMeters.get_loudness(str(track_path))
+        measures = LoudnessAnalyzer.get_loudness(str(track_path))
 
         # Extracting parameters
         lufs = measures['Integrated Loudness']['I']
@@ -89,14 +88,22 @@ class DataAnalyzerSVC:
         track_df.set_index('name', inplace=True)
 
         # Executing the kNN algorithm
-        return self.svc.predict(track_df)
+        return self.knn.predict(track_df)
 
     '''
     Getting the accuracy of the system
     '''
 
     def calculate_accuracy(self):
-        return self.svc.score(self.x_test, self.y_test)
+        if not hasattr(self, 'x_test'):
+            print('No test dataset')
+            return
+
+        if not hasattr(self, 'y_test'):
+            print('No test dataset')
+            return
+
+        return self.knn.score(self.x_test, self.y_test)
 
     '''
     Export classifier
@@ -111,4 +118,4 @@ class DataAnalyzerSVC:
     '''
 
     def import_classifier(self, file_name):
-        self.svc = load(file_name)
+        self.knn = load(file_name)

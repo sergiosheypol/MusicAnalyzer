@@ -1,11 +1,11 @@
-from audio_meters import AudioMeters
+from audio_features_loudness_analyzer import LoudnessAnalyzer
 import os
 import pandas as pd
 from pathlib import Path
-from bpm_analyzer import BPMAnalyzer
+from audio_features_bpm_analyzer import BPMAnalyzer
 
 
-class BatchReader:
+class BatchAnalyzer:
     def __init__(self, folder_path, genre):
 
         # Check if folder exists
@@ -35,7 +35,7 @@ class BatchReader:
         for track in self.files:
             path = Path(self.path) / track
 
-            measures = AudioMeters.get_loudness(str(path))
+            measures = LoudnessAnalyzer.get_loudness(str(path))
 
             tp = measures['True Peak']['Peak']
             lufs = measures['Integrated Loudness']['I']

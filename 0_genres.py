@@ -1,6 +1,6 @@
 import click
-from batch_reader import BatchReader
-from data_analyzer_knn import DataAnalyzer
+from batch_analyzer import BatchAnalyzer
+from knn_genre_classifier import KNNGenreClassifier
 
 
 @click.group()
@@ -19,7 +19,7 @@ def analyzer(batch_reader, add_database, run):
     path = batch_reader[0]
     genre = batch_reader[1]
 
-    br = BatchReader(path, genre)
+    br = BatchAnalyzer(path, genre)
 
     if len(add_database) == 2:
         existing_db_path = add_database[0]
@@ -40,17 +40,18 @@ def analyzer(batch_reader, add_database, run):
               help='Predict the genre of a given track. Parameters: path_to_model music_folder_path track_name')
 def classifier(model, predict):
     if len(model) == 2:
-        d_analyzer = DataAnalyzer(model[0], None)
+        d_analyzer = KNNGenreClassifier(model[0], None)
         d_analyzer.train_models(model[1])
         accuracy = d_analyzer.calculate_accuracy()
         click.echo(accuracy)
         return accuracy
 
     elif len(predict) == 3:
-        d_analyzer = DataAnalyzer(None, predict[0])
+        d_analyzer = KNNGenreClassifier(None, predict[0])
         genre = d_analyzer.predict_genre(predict[1], predict[2])
         click.echo('Predicted genre: ' + genre[0])
         return genre
+
 
 g.add_command(analyzer)
 g.add_command(classifier)
