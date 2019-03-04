@@ -7,7 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 
 
-class MFCCAnalyzer:
+class MFCCClassifier:
 
     def __init__(self, database_path, database_file_name):
 
