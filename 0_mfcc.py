@@ -9,38 +9,42 @@ def g():
     pass
 
 
-#
-# @click.command()
-# @click.option('-br', '--batch_reader', nargs=2, required=True,
-#               help='Set folder to read (1st parameter) and genre (2nd parameter)')
-# @click.option('-a', '--add_database', required=False, nargs=2,
-#               help='Add existing database Parameters: path_to_db db_file_name')
-# @click.option('-r', '--run', nargs=2, required=True,
-#               help='Run and export a JSON file. Parameters: path_to_export db_name')
-# def analyzer(batch_reader, add_database, run):
-#
-#
-#
-# @click.command()
-# @click.option('-m', '--model', required=False, nargs=2,
-#               help='Train a new model. Parameters: json_file_path model_path_to_export')
-# @click.option('-p', '--predict', required=False, nargs=3,
-#               help='Predict the genre of a given track. Parameters: path_to_model music_folder_path track_name')
-# def classifier(model, predict):
-
-
 @click.command()
-@click.argument('filepath', required=True, help='File to analyze')
-@click.argument('exportpath', required=True, help='Path to export the results')
-def read_single_track(filepath, exportpath):
+@click.argument('filepath', required=True)
+@click.argument('exportpath', required=True)
+def analyzer_single(filepath, exportpath):
     analyzer = TrackMFCCExtractor(filepath)
     analyzer.run()
     analyzer.export(exportpath)
+    click.echo("Track analyzed successfully")
 
 
-# g.add_command(analyzer)
-# g.add_command(classifier)
-g.add_command(read_single_track)
+@click.command()
+@click.option('-p', '--parameters', nargs=2, required=True,
+              help='Set folder to read (1st parameter) and instrument name (2nd parameter)')
+@click.option('-a', '--add_database', required=False, nargs=2,
+              help='Add existing database Parameters: path_to_db db_file_name')
+@click.option('-r', '--run', nargs=2, required=True,
+              help='Run and export a JSON file. Parameters: path_to_export db_name')
+def analyzer_multi_average(parameters, add_database, run):
+    click.echo(parameters)
+    click.echo(add_database)
+    click.echo(run)
+
+    analyzer = MFCCSingleInstrumentAnalyzer(parameters[0], parameters[1])
+
+    if len(add_database) == 2:
+        existing_db_path = add_database[0]
+        existing_db_name = add_database[1]
+        analyzer.add_existing_database(existing_db_path, existing_db_name)
+
+    analyzer.run()
+    analyzer.export(run[0], run[1])
+    click.echo("Track analyzed successfully")
+
+
+g.add_command(analyzer_single)
+g.add_command(analyzer_multi_average)
 
 if __name__ == '__main__':
     g()
