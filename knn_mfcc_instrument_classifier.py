@@ -5,16 +5,19 @@ import pandas as pd
 from pathlib import Path
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
+from joblib import dump, load
 
 
 class MFCCClassifier:
 
-    def __init__(self, database_path, database_file_name):
+    def __init__(self, database_path, trained_model_path):
 
-        if not os.path.exists(database_path):
+        if trained_model_path is not None:
+            path = Path(trained_model_path + '.joblib')
+            self.import_classifier(path)
             return
 
-        self.database_file_path = Path(database_path) / database_file_name
+        self.database_file_path = Path(database_path)
 
         # Load database if exists
         if os.path.isfile(self.database_file_path):
@@ -29,7 +32,7 @@ class MFCCClassifier:
         # kNN Classifier
         self.knn = KNeighborsClassifier(n_neighbors=3)
 
-    def train_models(self):
+    def train_models(self, model_name):
 
         # Removing the 'genre' column to train the algorithm
         x = self.database.drop(columns=['type'])
@@ -42,6 +45,9 @@ class MFCCClassifier:
                                                                                 stratify=y)
         # Training
         self.knn.fit(self.x_train, self.y_train)
+
+        # Export model
+        self.export_classifier(self.knn, model_name)
 
     '''
     Testing the algorithm with the 20% of the dataset
@@ -75,7 +81,6 @@ class MFCCClassifier:
         file_df.set_index('element', inplace=True)
         file_df = file_df.mfcc.apply(pd.Series)
 
-
         # Executing the kNN algorithm
         return self.knn.predict(file_df)
 
@@ -84,4 +89,27 @@ class MFCCClassifier:
     '''
 
     def calculate_accuracy(self):
+        if not hasattr(self, 'x_test'):
+            print('No test dataset')
+            return
+
+        if not hasattr(self, 'y_test'):
+            print('No test dataset')
+            return
+
         return self.knn.score(self.x_test, self.y_test)
+
+    '''
+    Export classifier
+    '''
+
+    def export_classifier(self, classifier, file_name):
+        dump(classifier, file_name + '.joblib')
+        return
+
+    '''
+    Import classifier
+    '''
+
+    def import_classifier(self, file_name):
+        self.knn = load(file_name)

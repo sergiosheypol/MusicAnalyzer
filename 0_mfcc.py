@@ -47,8 +47,9 @@ def analyzer_multi_average(parameters, add_database, run):
 @click.option('-m', '--model', required=False, nargs=2,
               help='Train a new model. Parameters: json_file_path model_path_to_export')
 @click.option('-p', '--predict', required=False, nargs=3,
-              help='Predict the genre of a given track. Parameters: path_to_model music_folder_path track_name')
+              help='Predict the genre of a given track. Parameters: path_to_model (without .joblib) instrument_folder_path instrument_file')
 def classificator(model, predict):
+
     if len(model) == 2:
         d_analyzer = MFCCClassifier(model[0], None)
         d_analyzer.train_models(model[1])
@@ -58,13 +59,14 @@ def classificator(model, predict):
 
     elif len(predict) == 3:
         d_analyzer = MFCCClassifier(None, predict[0])
-        genre = d_analyzer.predict_genre(predict[1], predict[2])
+        genre = d_analyzer.predict_instrument(predict[1], predict[2])
         click.echo('Predicted instrument: ' + genre[0])
         return genre
 
 
 g.add_command(analyzer_single)
 g.add_command(analyzer_multi_average)
+g.add_command(classificator)
 
 if __name__ == '__main__':
     g()
