@@ -1,8 +1,8 @@
-from audio_features_loudness_analyzer import LoudnessAnalyzer
+from features_extractors.loudness_analyzer import LoudnessAnalyzer
 import os
 import pandas as pd
 from pathlib import Path
-from audio_features_bpm_analyzer import BPMAnalyzer
+from features_extractors.bpm_analyzer import BPMAnalyzer
 
 
 class BatchAnalyzer:

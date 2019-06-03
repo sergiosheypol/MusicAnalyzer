@@ -1,5 +1,5 @@
-from audio_features_loudness_analyzer import LoudnessAnalyzer
-from audio_features_bpm_analyzer import BPMAnalyzer
+from features_extractors.loudness_analyzer import LoudnessAnalyzer
+from features_extractors.bpm_analyzer import BPMAnalyzer
 import os
 import pandas as pd
 from pathlib import Path
@@ -10,7 +10,12 @@ from joblib import dump, load
 
 class KNNGenreClassifier:
 
+    """
+    Pick either a JSON file or a trained model (.joblib files)
+    """
     def __init__(self, database_path, trained_model_path):
+
+        self.genres_database = None
 
         if trained_model_path is not None:
             path = Path(trained_model_path + '.joblib')
@@ -18,6 +23,7 @@ class KNNGenreClassifier:
             return
 
         if not os.path.exists(database_path):
+            print("Path not found")
             return
 
         self.database_file_path = Path(database_path)
@@ -26,6 +32,9 @@ class KNNGenreClassifier:
         if os.path.isfile(self.database_file_path):
             self.genres_database = pd.read_json(self.database_file_path, orient='index')
             self.genres_database.index.name = 'name'
+        else:
+            print('JSON file not found')
+            return
 
         # Useful variables
         self.x_train = None
@@ -37,6 +46,10 @@ class KNNGenreClassifier:
         self.knn = KNeighborsClassifier(n_neighbors=20)
 
     def train_models(self, model_name):
+
+        if self.genres_database is None:
+            print("No database. Check paths")
+            return
 
         # Removing the 'genre' column to train the algorithm
         x = self.genres_database.drop(columns=['genre'])

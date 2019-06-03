@@ -4,7 +4,7 @@
 * LUFS, dBTP and BPM reading
 * Genre classification based on  LUFS, dBTP and BPM with kNN and SVC algorithms
 * MFCC extraction for single instrument files (either MP3 or WAV)
-* MFCC extraction for full tracks (either MP3 or WAV)
+* Average MFCC extraction for full tracks (either MP3 or WAV)
 
 ## How to install
 
@@ -15,7 +15,6 @@ This project has been build upon an Conda3/Anaconda3 environment. Simply import 
 * Essentia
 * NumPy
 * Pandas
-* Click
 * Scikit-Learn
 
 ## System requirements

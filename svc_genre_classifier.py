@@ -1,5 +1,5 @@
-from audio_features_loudness_analyzer import LoudnessAnalyzer
-from audio_features_bpm_analyzer import BPMAnalyzer
+from features_extractors.loudness_analyzer import LoudnessAnalyzer
+from features_extractors.bpm_analyzer import BPMAnalyzer
 import os
 import pandas as pd
 from pathlib import Path
@@ -12,6 +12,8 @@ from joblib import dump, load
 class SVCGenreClassifier:
 
     def __init__(self, database_path, trained_model_path):
+
+        self.genres_database = None
 
         if trained_model_path is not None:
             path = Path(trained_model_path + '.joblib')
@@ -38,6 +40,10 @@ class SVCGenreClassifier:
         self.svc = SVC(gamma='auto')
 
     def train_models(self, model_name):
+
+        if self.genres_database is None:
+            print("No database. Check paths")
+            return
 
         # Removing the 'genre' column to train the algorithm
         x = self.genres_database.drop(columns=['genre'])
